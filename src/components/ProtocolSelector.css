@@ -1,0 +1,37 @@
+.protocol-selector.card {
+  margin-bottom: 2rem;
+}
+
+.protocol-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.protocol-options .btn.primary {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  opacity: 0.8;
+}
+
+.protocol-options .btn.primary:hover:not(:disabled) {
+  opacity: 1;
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.protocol-options .btn.primary.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.protocol-options .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

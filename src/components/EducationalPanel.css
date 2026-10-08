@@ -1,0 +1,73 @@
+.educational-panel {
+  padding: 2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.educational-panel h2 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.edu-description {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.edu-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-3px);
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.edu-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+.edu-card.how-it-works h4 { color: #60a5fa; border-color: rgba(96, 165, 250, 0.2); }
+.edu-card.advantages h4 { color: #34d399; border-color: rgba(52, 211, 153, 0.2); }
+.edu-card.disadvantages h4 { color: #f87171; border-color: rgba(248, 113, 113, 0.2); }
+.edu-card.typical-use h4 { color: #c084fc; border-color: rgba(192, 132, 252, 0.2); }
+
+.edu-card ul {
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.edu-card li {
+  margin-bottom: 0.5rem;
+}
+
+.edu-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}

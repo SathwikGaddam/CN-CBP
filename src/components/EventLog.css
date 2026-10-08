@@ -1,0 +1,80 @@
+.event-log-container {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.log-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.log-header .btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.events-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.events-list::-webkit-scrollbar { width: 6px; }
+.events-list::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.2); border-radius: 4px; }
+.events-list::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+
+.event-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.3);
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.event-time {
+  color: var(--text-muted);
+  min-width: 70px;
+}
+
+.event-message {
+  color: var(--text-main);
+}
+
+/* Event Types Styling */
+.event-item.packet_sent { border-left: 4px solid #60a5fa; }
+.event-item.ack_sent { border-left: 4px solid #8b5cf6; }
+.event-item.window_moved { border-left: 4px solid #8b5cf6; background: rgba(139, 92, 246, 0.1); }
+
+.event-item.packet_received { border-left: 4px solid #10b981; }
+.event-item.ack_received { border-left: 4px solid #10b981; }
+.event-item.packet_delivered { border-left: 4px solid #10b981; }
+.event-item.packet_buffered { border-left: 4px solid #34d399; background: rgba(52, 211, 153, 0.1); }
+
+.event-item.packet_lost { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.1); }
+.event-item.ack_lost { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.1); }
+.event-item.packet_discarded, .event-item.discarded { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.1); }
+
+.event-item.timeout { border-left: 4px solid #f59e0b; background: rgba(245, 158, 11, 0.1); }
+.event-item.retransmission { border-left: 4px solid #f59e0b; }
+.event-item.error { border-left: 4px solid #ef4444; background: rgba(239, 68, 68, 0.2); font-weight: bold; color: #fca5a5; }
+
+.empty-log {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 2rem 0;
+  text-align: center;
+}
